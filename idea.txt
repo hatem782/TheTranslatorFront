@@ -1,0 +1,51 @@
+1 : user must login
+2 : user must register
+
+3 : user have 3 options on sidebar :
+    a : just translate
+    b : discution
+    c : talk with ai
+    d : profile
+    e : logout
+
+- in a : user select his language and he see the other side contain a language too
+  when he press the record from his side : it will record his voice => text => ai translate => voice 
+  and ther's a button from other side
+
+- in b : user press bla bla bla , who press la5r ynjmch yepressi o ki 7ad yreleasi tetssayb
+
+- in c : talk with ai li na3rfou deja
+
+- in d : user can change his profile avatar , username , password , email , default language 
+         and he can change the outvoice of his
+
+
+user data : 
+    first name
+    last name
+    avatar_img
+    email
+    password
+    default_language
+    outvoice
+    user_unique_id
+
+conversation : 
+    user1_id
+    user2_id
+    conversation_id
+
+avatar : 
+    avatar_id
+    avatar_img
+
+voice :
+    voice_id
+    voice_name
+
+language : 
+    language_id
+    language_name
+    language_code
+
+

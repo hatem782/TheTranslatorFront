@@ -1,0 +1,156 @@
+//############################ Colors #######################
+
+:root {
+  --page-background: #00000000;
+
+  --font-color1: #000;
+  --font-color2: rgba(0, 0, 0, 0.4);
+
+  --main: #615ef0;
+
+  --green: #68d391;
+  --green-dark: #48bb78;
+  --green-light: #c6f6d5;
+
+  --orange: #dd6b20;
+  --orange-light: #feebc8;
+
+  --red: #f56565;
+  --red-light: #fff5f5;
+
+  --blue: #4299e1;
+  --blue-light: #ebf8ff;
+
+  --purple: #9f7aea;
+  --purple-light: #faf5ff;
+
+  --white: #ffffff;
+}
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+span::selection,
+div::selection,
+*::selection {
+  background: var(--main);
+  color: white;
+}
+
+//############################ Scroll #######################
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a2a2a2;
+  border-radius: 500px;
+  border: 2px solid var(--page-background);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--page-background);
+}
+
+// * {
+//   scrollbar-width: none;
+// }
+
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+
+//############################ FONTS #######################
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-Thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-ExtraLight.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-Light.ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-Medium.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-Black.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-Black.ttf");
+  font-weight: 900;
+}
+
+// -----------------------
+
+@font-face {
+  font-family: "PoetsenOne";
+  src: url("./assets/fonts//PoetsenOne-Regular.ttf");
+  font-weight: 400;
+}
+
+//############################ COMMON #######################
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-background);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppin";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
