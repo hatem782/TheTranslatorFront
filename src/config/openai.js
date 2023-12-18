@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 
-const key = "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";
+const key = "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";
 const openai = new OpenAI({ apiKey: key, dangerouslyAllowBrowser: true });
 
 export const generateText = ({ text, origin, target, callback }) => {
