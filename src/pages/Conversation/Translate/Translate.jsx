@@ -66,6 +66,8 @@ function Translate() {
   const lang_other =
     room.user1_lang.userid === userId ? room?.user2_lang : room?.user1_lang;
 
+  let currentuser = room.user1_lang.userid === userId ? 1 : 2;
+
   const recorder =
     room.recorder === 1 ? "me" : room.recorder === 2 ? "other" : null;
 
@@ -95,8 +97,10 @@ function Translate() {
   };
 
   const SetText = (text) => {
-    if (text === "") return;
-    roomRefs.doc(room.id).update({ text: text });
+    console.log(currentuser, room.recorder);
+    if (currentuser === room.recorder && text !== "") {
+      roomRefs.doc(room.id).update({ text: text });
+    }
   };
 
   if (room.name === "") {
