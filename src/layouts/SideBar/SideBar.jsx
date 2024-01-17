@@ -39,7 +39,7 @@ const icons = [
 ];
 
 function SideBar() {
-  const [selected, setSelected] = React.useState(1);
+  const [selected, setSelected] = React.useState(0);
 
   return (
     <div className={styles.main}>

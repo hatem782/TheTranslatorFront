@@ -1,0 +1,57 @@
+.main {
+  background-color: var(--main);
+  padding: 50px 20px;
+
+  width: 30vw;
+
+  h2 {
+    text-align: center;
+    color: white;
+  }
+
+  .body {
+    width: 100%;
+    input {
+      margin: 10px 0px;
+      width: 100%;
+      padding: 10px;
+      color: white;
+      border: solid 2px white;
+      background-color: transparent;
+      font-size: 20px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: white;
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    button {
+      width: 150px;
+      height: 50px;
+
+      border: none;
+      outline: none;
+      background-color: var(--main);
+      color: white;
+      cursor: pointer;
+      margin: 0px 0px 0px 5px;
+      border: solid 2px white;
+      border-radius: 5px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+  }
+}
