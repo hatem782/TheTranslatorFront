@@ -61,10 +61,8 @@ function Translate() {
   }, [snapshot, params]);
 
   let userId = localStorage.getItem("userId");
-  const lang_me =
-    room.user1_lang.userid === userId ? room?.user1_lang : room?.user2_lang;
-  const lang_other =
-    room.user1_lang.userid === userId ? room?.user2_lang : room?.user1_lang;
+  const lang_me = room.user1_lang;
+  const lang_other = room?.user2_lang;
 
   let currentuser = room.user1_lang.userid === userId ? 1 : 2;
 
@@ -112,6 +110,7 @@ function Translate() {
       <div className={styles.head}>
         <UserLang
           type="me"
+          display={userId === room.user1_lang.userid ? "Me" : "Other"}
           lang={lang_me}
           setLang={SetLangMe}
           recorder={recorder}
@@ -135,6 +134,7 @@ function Translate() {
         <UserLang
           type="other"
           lang={lang_other}
+          display={userId === room.user2_lang.userid ? "Me" : "Other"}
           setLang={SetLangOther}
           recorder={recorder}
           SetRecord={SetRecord}
@@ -144,7 +144,14 @@ function Translate() {
   );
 }
 
-const UserLang = ({ type = "me", lang, setLang, recorder, SetRecord }) => {
+const UserLang = ({
+  type = "me",
+  lang,
+  setLang,
+  recorder,
+  SetRecord,
+  display,
+}) => {
   let me = type === "user1" ? "My Language" : "Other Language";
   let { open, handle_open, handle_close } = usePupup();
 
@@ -168,7 +175,7 @@ const UserLang = ({ type = "me", lang, setLang, recorder, SetRecord }) => {
       />
       <div className={styles.language}>
         <span onClick={handle_open}>
-          {me} : {lang.name}
+          {display} : {lang.name}
         </span>
         <div
           className={`
